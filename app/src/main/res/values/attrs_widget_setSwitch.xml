@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="setSwitch">
+        <attr name="setSwitch_Title" format="string"/>
+        <attr name="setSwitch_Help" format="string"/>
+    </declare-styleable>
+</resources>
