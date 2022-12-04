@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.hd.hdtool",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20221108,
+      "versionName": "1.0.590",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.HookSetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/themes"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btnAppSetBackLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                app:srcCompat="@drawable/ic_back"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAppSetAppName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center|left"
+                android:text="应用名称"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/swAppSetOpen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="总开关"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="作者HD提示"
+                            android:textColor="#ff0000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="先打开右上角的应用总开关，这样才能使以下开关功能生效"
+                            android:textColor="#ff0000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="安卓11及以上系统，被Hook程序需拥有读写权限才能使用"
+                            android:textColor="#ff0000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="如果被Hook应用已经拥有读写权限，但还是无法正常使用"
+                            android:textColor="#ff0000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="请移动Hd_Tool下的'包名'文件夹和'Hd_Tool'文件"
+                            android:textColor="#ff0000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="到'/Android/data/包名/files/'里面"
+                            android:textColor="#ff0000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="调试">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHdDebug"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HdDebug"
+                        app:setSwitch_Title="HdDebug" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="应用">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideXposed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> Xposed"
+                        app:setSwitch_Title="隐藏Xposed" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> Root"
+                        app:setSwitch_Title="隐藏Root" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="隐藏应用列表(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="隐藏多开环境(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="隐藏虚拟机(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="隐藏模拟器(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideMagisk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> Magisk"
+                        app:setSwitch_Title="隐藏Magisk(beta)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideTaiChiEpic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> TaiChi Epic"
+                        app:setSwitch_Title="隐藏TaiChi Epic(beta)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideCydiaSubstrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> Cydia Substrate"
+                        app:setSwitch_Title="隐藏Cydia Substrate(beta)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> FRIDA,ADBI,DDI"
+                        app:setSwitch_Title="隐藏FRIDA,ADBI,DDI(beta)" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="网络">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideVpn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> VPN"
+                        app:setSwitch_Title="隐藏VPN" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetHideWifiProxy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Hide -> WIFI代理"
+                        app:setSwitch_Title="隐藏WIFI代理" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorHttp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Http"
+                        app:setSwitch_Title="Http请求监控(beta)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="网络类型伪装(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="WIFI信息伪装(Not Developed)" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="版本">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAnalogVersionCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Analog -> 版本号"
+                        app:setSwitch_Title="版本号" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAnalogVersionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Analog -> 版本名"
+                        app:setSwitch_Title="版本名" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="热修复">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="热修复Dex(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="热修复Arsc(Not Developed)" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="弹窗">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetCancelWindow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Cancel -> Window"
+                        app:setSwitch_Title="强制可取消" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetWindowKeywords"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> Keywords"
+                        app:setSwitch_Title="拦截关键词" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Dialog"
+                        app:setSwitch_Title="Dialog" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorToast"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Toast"
+                        app:setSwitch_Title="Toast" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorPopupWindow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> PopupWindow"
+                        app:setSwitch_Title="PopupWindow" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="事件">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorOnClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> OnClick"
+                        app:setSwitch_Title="OnClick" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorOnLongClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> OnLongClick"
+                        app:setSwitch_Title="OnLongClick" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorSetText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> SetText"
+                        app:setSwitch_Title="SetText" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorExit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Exit"
+                        app:setSwitch_Title="Exit" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="算法(beta)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAlgorithmBase64"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Algorithm -> Base64"
+                        app:setSwitch_Title="编码算法" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAlgorithmAesDesRsa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Algorithm -> AES,DES,RSA"
+                        app:setSwitch_Title="加密算法(bug)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAlgorithmMd5Sha"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Algorithm -> MD5,SHA"
+                        app:setSwitch_Title="摘要算法(bug)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAlgorithmHmac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Algorithm -> Hmac"
+                        app:setSwitch_Title="信息摘要算法" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="JSON">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorJsonObjectPut"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> JsonObject put"
+                        app:setSwitch_Title="JsonObject 添加" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorJsonObjectGet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> JsonObject get"
+                        app:setSwitch_Title="JsonObject 获取" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorJsonArrayPut"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> JsonArray put"
+                        app:setSwitch_Title="JsonArray 添加" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorJsonArrayGet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> JsonArray get"
+                        app:setSwitch_Title="JsonArray 获取" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="组件">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="Application(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Activity"
+                        app:setSwitch_Title="Activity" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="指定/禁用 Activity(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="指定/禁用 Service(Not Developed)" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="文件">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFileRead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="File -> Read"
+                        app:setSwitch_Title="读取" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFileWrite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="File -> Write"
+                        app:setSwitch_Title="写入" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFileDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="File -> Delete"
+                        app:setSwitch_Title="删除" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFileAssets"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="File -> Assets"
+                        app:setSwitch_Title="资源文件" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="数据库">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="打开(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="增加(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="删除(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="修改(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="查询(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="执行语句(Not Developed)" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="媒体">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="拍摄图片(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="录制视频(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="录制音频(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="视频滤镜(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="音频变声(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="执行语句(Not Developed)" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="签名">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorSignatures"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Signatures"
+                        app:setSwitch_Title="监听" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="模拟(Not Developed)" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="其他">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetMonitorShell"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Shell"
+                        app:setSwitch_Title="命令行监听" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetScreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> Screen"
+                        app:setSwitch_Title="解除屏幕截图与录制限制" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="剪贴板(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="设备信息模拟(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="运动模拟(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetStringEqual"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="EditText -> 密码"
+                        app:setSwitch_Title="解锁密码监听" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="加固(2022.7) | 不勾选则使用默认方案">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFindContextBase"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="TestFind -> attachBaseContext"
+                        app:setSwitch_Title="通用加固方案" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFindContextQihoo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="TestFind -> com.stub.StubApp"
+                        app:setSwitch_Title="360加固" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFindContextTencent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="TestFind -> com.wrapper.proxyapplication"
+                        app:setSwitch_Title="腾讯御安全" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetFindContextBangcle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="TestFind -> com.secneo.apkwrapper.AW"
+                        app:setSwitch_Title="梆梆加固企业版" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="广告(beta)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetKillADsModeByteDance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> com.bytedance.sdk"
+                        app:setSwitch_Title="字节跳动-穿山甲" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetKillADsModeTencent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> com.qq.e.ads"
+                        app:setSwitch_Title="腾讯-优量汇" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetKillADsModeMimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> com.miui.zeus.mimo.sdk"
+                        app:setSwitch_Title="小米-米盟" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="测试">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetKillSharePage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> com.tencent.a.SetupInfoActivity"
+                        app:setSwitch_Title="分享页" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetKillTpACE"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> com.tencent.tp.TssJavaMethod"
+                        app:setSwitch_Title="ACE警告" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="CloudInject(1.7.6)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetCloudInject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 远程注册机|远程公告|应用检测|远程启动图"
+                        app:setSwitch_Title="通杀模式 -> 智能 | 手动" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="Arm Pro(1.3.1)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetArmProFindClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="TestFind -> 自定义类名"
+                        app:setSwitch_Title="自定义类名" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetArmProGlobalMode1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 卡密验证|远程公告|应用升级"
+                        app:setSwitch_Title="全局模式 -> 1 | 2" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetArmProGlobalMode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 卡密验证|远程公告|应用升级"
+                        app:setSwitch_Title="单例模式" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="小纸片(2.0)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetXamarinStandardMode1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 单码验证|引流加群|登录验证|额外检测|基础配置"
+                        app:setSwitch_Title="标准模式 -> 智能模式" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetXamarinStandardMode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 单码验证|引流加群|登录验证|额外检测|基础配置"
+                        app:setSwitch_Title="标准模式 -> 单例模式" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetXamarinStandardMode3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 单码验证|引流加群|登录验证|额外检测|基础配置"
+                        app:setSwitch_Title="标准模式 -> 全屏注册机 | 页面模式" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetXamarinQurikMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Kill -> 单码验证|引流加群|登录验证|额外检测|基础配置"
+                        app:setSwitch_Title="兼容模式 -> Andlua | iapp | GG修改器" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="AndLua+(6.8-beta5)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAndluaCallMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> CallMethod"
+                        app:setSwitch_Title="调用方法监控" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAndluaHttpTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> HttpTask"
+                        app:setSwitch_Title="网络请求监控" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="修改网络地址(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAndluaRunFunc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> RunFunc"
+                        app:setSwitch_Title="运行功能监控" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="强制去除检测(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetAndluaAlertDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Cancel -> AlertDialog"
+                        app:setSwitch_Title="对话框取消" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#008278" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hd.hdtool.widget.SetTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setTitle_Title="GameGuardian(101.1)">
+
+                    </com.hd.hdtool.widget.SetTitle>
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetGameGuardianMoreFunction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> MoreFunction"
+                        app:setSwitch_Title="多要函数监控" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetGameGuardianHttpFunction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> HttpFunction"
+                        app:setSwitch_Title="网络函数解析" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="HD -> Not Developed"
+                        app:setSwitch_Title="修改网络地址(Not Developed)" />
+
+                    <com.hd.hdtool.widget.SetSwitch
+                        android:id="@+id/swAppSetGameGuardianMainFunction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:setSwitch_Help="Monitor -> MainFunction"
+                        app:setSwitch_Title="主要函数解析" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
