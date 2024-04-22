@@ -4,9 +4,15 @@
 
 > **基于XposedBridgeAPI与Java的HdTool**
 
-![Stars](https://img.shields.io/github/stars/Xposed-Modules-Repo/com.hd.hdtool?label=stars)
-![Release](https://img.shields.io/github/v/release/Xposed-Modules-Repo/com.hd.hdtool?include_prereleases)
-![Download](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.hd.hdtool/total)
+<div align="center">
+
+  [![Stars](https://img.shields.io/github/stars/Xposed-Modules-Repo/com.hd.hdtool?label=stars)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool)
+  [![LSP%20Repo](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.hd.hdtool/total?label=LSP%20Repo&labelColor=F48FB1)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/releases)
+  [![Issues](https://img.shields.io/github/issues/Xposed-Modules-Repo/com.hd.hookgg)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/issues)
+
+</div>
+
+[![Release](https://img.shields.io/github/v/release/Xposed-Modules-Repo/com.hd.hdtool)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/releases/latest)
 
 </div>
 
