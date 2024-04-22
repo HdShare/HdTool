@@ -14,6 +14,7 @@ import javax.crypto.Mac;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
+import de.robv.android.xposed.XposedHelpers;
 
 public class HmacHook {
 
@@ -68,6 +69,7 @@ public class HmacHook {
                         }
                     }
             );
+
             XposedBridge.hookAllMethods(
                     Mac.class,
                     "doFinal",

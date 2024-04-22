@@ -7,7 +7,7 @@ public class HdUtils {
     }
 
     public static boolean isDebug() {
-        return false;
+        return true;
     }
 
     public static String getPackageName() {

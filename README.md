@@ -2,24 +2,39 @@
 
 <h1>HdTool</h1>
 
+> **基于XposedBridgeAPI与Java的HdTool**
+
 ![Stars](https://img.shields.io/github/stars/Xposed-Modules-Repo/com.hd.hdtool?label=stars)
 ![Release](https://img.shields.io/github/v/release/Xposed-Modules-Repo/com.hd.hdtool?include_prereleases)
 ![Download](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.hd.hdtool/total)
 
 </div>
 
-### 项目参考：
+---
+## 截图:
+
+<div align="left">
+<div>
+    <img src="images/image1.png" width="18%" />
+    <img src="images/image2.png" width="18%" />
+    <img src="images/image3.png" width="18%" />
+    <img src="images/image4.png" width="18%" />
+    <img src="images/image5.png" width="18%" />
+</div>
+</div>
+
+### 参考：
 
 - 对话框取消
 - 算法助手
 - SimpleHook
 
-### 项目缺陷：
+### 缺陷：
 
 - 众多未知bug
 - 部分已知bug
 
-### 项目介绍:
+### 介绍:
 
 - 隐藏Root、Xp
 - 隐藏Vpn、Wifi代理

@@ -9,8 +9,8 @@ android {
         applicationId "com.hd.hdtool"
         minSdk 23
         targetSdk 27
-        versionCode 20221108
-        versionName "1.0.590"
+        versionCode 20230630
+        versionName "1.0.591"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
