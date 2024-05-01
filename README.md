@@ -5,10 +5,14 @@
 > **基于XposedBridgeAPI与Java的HdTool**
 
 <div align="center">
+  
+  [![LSP Stars](https://img.shields.io/github/stars/Xposed-Modules-Repo/com.hd.hdtool?label=LSP%20Stars)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool)
+  [![LSP Repo](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.hd.hdtool/total?label=LSP%20Repo&labelColor=f48fb1)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/releases)
+  [![LSP Issues](https://img.shields.io/github/issues/Xposed-Modules-Repo/com.hd.hdtool?label=LSP%20Issues)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/issues)
 
-  [![Stars](https://img.shields.io/github/stars/Xposed-Modules-Repo/com.hd.hdtool?label=stars)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool)
-  [![LSP%20Repo](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.hd.hdtool/total?label=LSP%20Repo&labelColor=F48FB1)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/releases)
-  [![Issues](https://img.shields.io/github/issues/Xposed-Modules-Repo/com.hd.hookgg)](https://github.com/Xposed-Modules-Repo/com.hd.hdtool/issues)
+  [![Source Stars](https://img.shields.io/github/stars/HdShare/HdTool?label=Source%20Stars)](https://github.com/HdShare/HdTool)
+  [![Source Repo](https://img.shields.io/github/downloads/HdShare/HdTool/total?label=Source%20Repo&labelColor=1f2328)](https://github.com/HdShare/HdTool/releases)
+  [![Source Issues](https://img.shields.io/github/issues/HdShare/HdTool?label=Source%20Issues)](https://github.com/HdShare/HdTool/issues)
 
 </div>
 
